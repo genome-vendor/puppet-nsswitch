@@ -3,7 +3,7 @@ class nsswitch::params {
 
   case $::operatingsystem {
   
-    /(?i:Debian)/: {
+    /(?i:Debian|Ubuntu)/: {
       
       $package = [ 'nscd', 'libnss-ldap' ]
       
