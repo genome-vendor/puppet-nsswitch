@@ -30,7 +30,7 @@ class nsswitch::config {
           owner   => 'root',
           group   => 'root',
           mode    => 0640,
-          content => template("nsswitch/nslcd.conf.erb"),
+          content => template("nsswitch/redhat/etc/nslcd.conf.erb"),
           notify  => Service[$nsswitch::params::service],
           require => Package[$nsswitch::params::service_pkg],
         }
